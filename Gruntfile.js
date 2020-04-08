@@ -32,6 +32,15 @@ module.exports = function (grunt) {
         },
         cssmin: {
             'dist/bundle.min.css': 'dist/bundle.css'
+        },
+	clean: {
+            end: ['dist/bundle.css', 'dist/bundle.js', '.tmp']
+        },
+        copy: {
+            html: {
+                src: './index.html',
+                dest: './dist/index.html'
+            }
         }
     });
    
@@ -40,6 +49,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-clean');
   
-    grunt.registerTask('build', ['concat','uglify', 'cssmin','htmlmin', 'imagemin']);
+    grunt.registerTask('build', ['copy:html','concat','uglify', 'cssmin','htmlmin', 'imagemin','clean:end']);
 };
