@@ -1,0 +1,30 @@
+{
+  "name": "spa-homework5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangyahong423/spa-homework5.git"
+  },
+  "author": "wangyahong423",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wangyahong423/spa-homework5/issues"
+  },
+  "homepage": "https://github.com/wangyahong423/spa-homework5#readme",
+  "dependencies": {
+    "D": "^1.0.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.1.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-htmlmin": "^3.1.0",
+    "grunt-contrib-imagemin": "^4.0.0",
+    "grunt-contrib-uglify": "^4.0.1"
+  }
+}
