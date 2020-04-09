@@ -41,6 +41,15 @@ module.exports = function (grunt) {
                 src: './index.html',
                 dest: './dist/index.html'
             }
+        },
+        useminPrepare: {
+            html: 'index.html',
+            options: {
+                dest: 'dist'
+            }
+        },
+        usemin: {
+            html: ['dist/index.html']
         }
     });
    
@@ -51,6 +60,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-usemin');
   
-    grunt.registerTask('build', ['copy:html','concat','uglify', 'cssmin','htmlmin', 'imagemin','clean:end']);
+    grunt.registerTask('build', ['copy:html','useminPrepare','concat','uglify', 'cssmin','usemin','htmlmin', 'imagemin','clean:end']);
 };
